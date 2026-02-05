@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stăpânul Mesei - E-Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Georgia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Stăpânul Mesei</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="about.html">Despre Noi</a></li>
+                <li><a href="location.html">Locație</a></li>
+                <li><a href="shop.html">E-Shop</a></li>
+            </ul>
+            <div class="cart-header">
+                <a href="shop.html">Coș (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="shop">
+        <div class="container">
+            <h1>Comandă Online</h1>
+            <p class="lead">Alege plăcintele și copturile preferate – proaspete, livrate calde în Bălți și împrejurimi.</p>
+
+            <div class="products-grid">
+                <!-- Exemplu produs 1 – înlocuiește src cu pozele tale reale -->
+                <div class="product">
+                    <img src="image/one-placinda-wooden-table-flour-.webp" alt="Plăcinte cu brânză">
+                    <h3>Plăcinte cu brânză</h3>
+                    <p class="price">15 MDL / buc</p>
+                    <button onclick="addToCart('Plăcinte cu brânză', 15)">Adaugă în coș</button>
+                </div>
+
+                <div class="product">
+                    <img src="image/maxresdefault.jpg" alt="Plăcinte cu carne">
+                    <h3>Plăcinte cu carne</h3>
+                    <p class="price">18 MDL / buc</p>
+                    <button onclick="addToCart('Plăcinte cu carne', 18)">Adaugă în coș</button>
+                </div>
+
+                <div class="product">
+                    <img src="image/il_570xN.2651493584_orfz.webp" alt="Cozonac cu nucă">
+                    <h3>Cozonac cu nucă și stafide</h3>
+                    <p class="price">85 MDL / kg</p>
+                    <button onclick="addToCart('Cozonac cu nucă', 85)">Adaugă în coș</button>
+                </div>
+
+                <div class="product">
+                    <img src="image/traditional-homemade-romanian-mo.webp" alt="Plăcinte cu cartofi">
+                    <h3>Plăcinte cu cartofi</h3>
+                    <p class="price">14 MDL / buc</p>
+                    <button onclick="addToCart('Plăcinte cu cartofi', 14)">Adaugă în coș</button>
+                </div>
+
+                <!-- Adaugă mai multe produse după nevoie, cu pozele tale -->
+            </div>
+
+            <div class="cart">
+                <h2>Coșul tău</h2>
+                <ul id="cart-items"></ul>
+                <div class="total">Total: <span id="total">0</span> MDL</div>
+                <button onclick="clearCart()" class="clear-btn">Golește coșul</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Stăpânul Mesei • Toate drepturile rezervate</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
