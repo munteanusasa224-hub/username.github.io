@@ -1,0 +1,452 @@
+:root {
+    --main: #ff0000;
+}
+
+/* ================= RESET ================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= BODY ================= */
+
+body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.18rem;
+    line-height: 1.78;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 215, 0, 0.10),
+        rgba(255, 0, 0, 0.08)
+    );
+    color: #333;
+    position: relative;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105px;
+    z-index: 1000;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("image/header.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.header-spacer {
+    height: 120px;
+}
+
+/* ================= NAV ================= */
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    letter-spacing: 2.5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a,
+.cart-header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6rem 1.6rem;
+    border-radius: 30px;
+    border: 2px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.12);
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.cart-header a:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* ================= CONTENT ================= */
+
+section {
+    padding: 3rem 2rem 1.5rem;
+}
+
+.fancy-title {
+    text-align: center;
+    color: var(--main);
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.4rem;
+    margin: 1.5rem 0 4rem;
+}
+
+/* ================= INFO BOX ================= */
+
+.info-box {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ================= STATISTICI ================= */
+
+.stats-section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.stats-section h2 {
+    font-size: 0;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+/* TEXT CU BOABE */
+.stats-section h2::before {
+    content: "Produsul nou creat cu magie";
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    display: inline-block;
+
+    background-image: url("image/coffee-beans.png");
+    background-size: cover;
+    background-position: center;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    padding-right: 90px;
+}
+
+/* BOABĂ -25% */
+.stats-section h2::after {
+    content: "-25%";
+    position: absolute;
+    right: -10px;
+    top: -15px;
+
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 30% 30%, #6b3b1e, #2b150a);
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    transform: rotate(-12deg);
+}
+
+/* ================= GRID ================= */
+
+.stats-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 3rem;
+}
+
+/* CARD STAT */
+.stat {
+    padding: 1.8rem 1.2rem;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: rgba(255,255,255,0.35);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(0,0,0,0.05),
+        0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* 🔥 NUMERE PERFECT STABILE 🔥 */
+.stat .number {
+    display: inline-block;
+    min-width: 3ch;
+    text-align: center;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #111;
+
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    letter-spacing: 0.02em;
+}
+
+.stat p {
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+}
+
+/* IMAGINE */
+.stat-image img {
+    width: 220px;
+    display: block;
+    margin: auto;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1.8rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-section h2::before {
+        font-size: 2.2rem;
+        padding-right: 0;
+    }
+
+    .stats-section h2::after {
+        position: static;
+        margin: 1rem auto 0;
+    }
+}
+
+/* ================= NINSOARE ================= */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    z-index: 9999;
+
+    background-image:
+        radial-gradient(4px 4px at 10% 10%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(3px 3px at 30% 40%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(2px 2px at 70% 20%, rgba(255,255,255,0.85), transparent),
+        radial-gradient(3px 3px at 80% 70%, rgba(255,255,255,0.7), transparent);
+
+    animation: snow-fall 20s linear infinite;
+}
+
+body::after {
+    opacity: 0.7;
+    animation-duration: 28s;
+}
+
+@keyframes snow-fall {
+    from { transform: translateY(0); }
+    to   { transform: translateY(60%); }
+}
+/* ================= FIX HEADER + SHOP ================= */
+
+/* spațiu sub header FIXED */
+#shop {
+    margin-top: 140px;   /* ↓ coboară tot shop-ul */
+    display: flex;
+    justify-content: center;
+}
+
+/* container centrat */
+#shop .container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+/* TITLU */
+#shop h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* SUBTITLU */
+#shop .lead {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    color: #444;
+}
+
+/* GRID PRODUSE */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+    margin-bottom: 4rem;
+}
+
+/* CARD PRODUS */
+.product {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+}
+
+/* IMAGINE */
+.product img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+/* TEXT PRODUS */
+.product h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.product .price {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* BUTOANE */
+.product button,
+.cart button {
+    background: linear-gradient(135deg, #ff0000, #b30000);
+    border: none;
+    color: #fff;
+    padding: 0.7rem 1.8rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product button:hover,
+.cart button:hover {
+    transform: scale(1.08);
+}
+
+/* COS */
+.cart {
+    max-width: 420px;
+    margin: auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.cart h2 {
+    margin-bottom: 1.2rem;
+}
+
+#cart-items {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.total {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+/* ================= HARTI ================= */
+
+#maps {
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+}
+
+.maps-container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.map-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.map-card h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    color: #ff0000;
+}
+
+.map-card iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 14px;
+    margin-bottom: 1.2rem;
+}
+
+/* POZA SUB HARTĂ */
+.map-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
